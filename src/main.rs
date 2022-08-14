@@ -1,4 +1,4 @@
-// use std::collections::HashMap;
+use std::{collections::HashMap};
 
 fn main() {
     // let mut v: Vec<i32> = Vec::new();
@@ -195,5 +195,46 @@ fn main() {
     // }
     // println!("{}",new_phrase);
 
+    // // Dep and employees
+    // let mut my_company = Company::new(String::from("CS"));
+
+    // my_company.add_employee(String::from("IT"), String::from("Dev"));
+
+    // let my_employees = my_company.get_department(String::from("IT"));
+
+    // match my_employees {
+    //     Some(d)=>println!("employees in IT dep : {:?}", d),
+    //     None=>println!("No employees")
+    // }
+
+
+
+
+
 
 }
+
+// struct Company {
+//     name:String,
+//     employees:HashMap<String,Vec<String>>
+// }
+// impl Company {
+//     fn new(name:String)->Self{
+//         Self {
+//             name,
+//             employees:HashMap::new()
+//         }
+//     }
+//     fn add_employee(&mut self,dep:String,employee:String){
+//         let found_dep = self.employees.entry(dep).or_insert(vec![]);
+//         found_dep.sort();
+//         match found_dep.binary_search(&employee) {
+//             Err(_)=>found_dep.push(employee),
+//             _=>println!("Found Employee")
+//         }
+//     }
+
+//     fn get_department(&self,dep:String)->Option<&Vec<String>>{
+//         self.employees.get(&dep)
+//     }
+// }
